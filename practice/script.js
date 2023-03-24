@@ -1,9 +1,14 @@
-// 定数helloに関数を代入してください
-const hello = function(){
-  console.log("こんにちは！");
-  console.log("私の名前は○○です");
-}
+$(function() {
+  $('.btn').click(function() {
+    // $('#title')を変数$titleに代入してください
+    var $title = $('#title');
 
+    // 「#title」に対する3つのメソッドを、変数を使って書き換えてください
+    $title.css('color', 'red');
+    $title.html('こんばんは、にんじゃわんこさん');
+    $title.fadeOut(1000);
 
-// 定数helloに代入された関数を呼び出してください
-hello();
+    // 「#text」に対する3つのメソッドを、メソッドチェーンを使って書き換えてください
+    $('#text').css('color', 'blue').html('<h3>jQueryをマスターしましょう！</h3>').fadeOut(1000);
+  });
+});
